@@ -1,0 +1,43 @@
+</nav>
+</header>
+<main>		
+ <header><h3>Good Night/h3></header>
+ <div id="mydiv">Time of Day: Night</div>
+ <p>Night (11 pm to 5 am)</p>
+ <p>Good Night! Ummmm, ain't it past ya bedtime??! Ayeee..</p>
+  <img src="night.jpg" alt="Picture of Night" class="flexible" />
+ </main>
+<footer>
+  <small>&copy; 2021, All Rights Reserved ~
+  <a href="https://validator.w3.org/check/referer" target="_blank">Valid HTML</a> ~
+  <a href="https://jigsaw.w3.org/css-validator/check?uri=referer" target="_blank">Valid CSS</a>
+  </small>
+</footer>
+<!-- END Footer -->
+<script>
+let myDate = new Date();
+let myHours = myDate.getHours();
+let myGreeting = 'Good Greetings;
+let myColor = "Blue;
+
+
+if(myHours > 12){
+myGreeting = "Good Afternoon",
+myColor = "orange";
+}else{
+myGreeting = "Good Morning?";
+myColor = "yellow";
+}else{
+myGreeting = "Good Evening";
+myColor = "red";
+}else{
+myGreeting = "Good Night";
+myColor = "green"
+}
+
+document.getElementById("mydiv").innerHTML = myGreeting;
+document.body.style.backgroundColor = myColor;
+
+</script>
+</body>
+</html>
