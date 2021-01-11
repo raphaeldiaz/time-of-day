@@ -67,11 +67,8 @@
 	</header>
     <main>		
 	 <header><h3>IT 211 assignment by Raphael .D</h3></header>
-	 <div id="mydiv">Time of Day: Morning</div>
-	 <p>Morning (5 am to 12 noon)</p>
-	 <p>Good Morning! Time to get up lazy bum</p>
-	  <img src="morning.jpg" alt="Picture of Morning" class="flexible" />
-     </main>
+	 <div id="mydiv">Greeting goes here</div>
+	</main>
     <footer>
       <small>&copy; 2021, All Rights Reserved ~
       <a href="https://validator.w3.org/check/referer" target="_blank">Valid HTML</a> ~
@@ -79,19 +76,26 @@
       </small>
     </footer>
 	<!-- END Footer -->
+	<button onclick="myFunction()">Try it</button>
+<p id="mydiv"></p>
+
 <script>
 let myDate = new Date();
 let myHours = myDate.getHours();
 let myGreeting = "Good Morning";
 let myColor = "Blue";
+//TEST ONLY - REMOVE
+myHours = 8;
 
+const mydiv = document.getElementById("mydiv").innerHTML;
 
-if(myHours > 12){
-myGreeting = "Good Afternoon",
-myColor = "orange";
+if (myHour >= 5 && myHour <12) {
+	myGreeting = "Good Morning" ;
+	myColor = "yellow";
 }else{
- myGreeting = "Good Morning?";
-myColor = "yellow";
+	alert('Not morning');
+}
+mydiv = "Time of Day: Morning<p>Morning (5 am to 12 noon)</p><p>Good Morning! Time to get up lazy bum</p><img src=\"images\/morning.jpg\" alt=\"Picture of Morning\" class=\"flexible\""
 } if (time < 10) {
   greeting = "Good Evening";
 } else if (time < 20) {
