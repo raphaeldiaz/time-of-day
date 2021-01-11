@@ -92,12 +92,12 @@ myColor = "orange";
 }else{
  myGreeting = "Good Morning?";
 myColor = "yellow";
-}else{
-    myGreeting = "Good Evening";
-    myColor = "red";
-}else{
-    myGreeting = "Good Night";
-    myColor = "green"
+} if (time < 10) {
+  greeting = "Good Evening";
+} else if (time < 20) {
+  greeting = "Good day";
+} else {
+  greeting = "Good Night";
 }
 
 document.getElementById("mydiv").innerHTML = myGreeting;
