@@ -65,9 +65,9 @@
 			</ul>
 </nav>
 	</header>
-    <main>		
+	<div id="mydiv">Greeting goes here</div>
+    <main>	
 	 <header><h3>IT 211 assignment by Raphael .D</h3></header>
-	 <div id="mydiv"></div>
 	<img src="images/evening.jpg" alt="Time of day pic" id="mypic" class="flexible" />
 	</main>
     <footer>
@@ -77,8 +77,6 @@
       </small>
     </footer>
 	<!-- END Footer -->
-	
-<p id="mydiv"></p>
 
 <script>
 let myDate = new Date();
@@ -86,11 +84,8 @@ let myHours = myDate.getHours();
 let myGreeting = "";
 let myColor = "";
 let mypic = "images/";
+myHours = myDate.getHours();
 
-//TEST ONLY - REMOVE
-myHours = 15;
-
-const mydiv = document.getElementById("mydiv").innerHTML;
 
 if (myHours >= 5 && myHours <12) {
 	myGreeting = "Good Morning" ;
@@ -113,6 +108,10 @@ mypic += "night.jpg";
 {alert('NOT morning')
 }
 
+var theYear = document.createElement('div');
+theYear.classList.add('the-year');
+theYear.textContent = 'Copyright' + new Date().getFullYear() + 'Time of Day.';
+document.body.appendChild(theYear);
 document.getElementById("mydiv").innerHTML = myGreeting;
 document.body.style.backgroundColor = myColor;
 document.getElementById("mypic").src = mypic;
