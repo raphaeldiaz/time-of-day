@@ -67,7 +67,8 @@
 	</header>
     <main>		
 	 <header><h3>IT 211 assignment by Raphael .D</h3></header>
-	 <div id="mydiv">Greeting goes here</div>
+	 <div id="mydiv"></div>
+	<img src="images/evening.jpg" alt="Time of day pic" id="mypic" class="flexible" />
 	</main>
     <footer>
       <small>&copy; 2021, All Rights Reserved ~
@@ -82,31 +83,39 @@
 <script>
 let myDate = new Date();
 let myHours = myDate.getHours();
-let myGreeting = "Good Morning";
-let myColor = "Blue";
+let myGreeting = "";
+let myColor = "";
+let mypic = "images/";
+
 //TEST ONLY - REMOVE
-myHours = 8;
+myHours = 15;
 
 const mydiv = document.getElementById("mydiv").innerHTML;
 
-if (myHour >= 5 && myHour <12) {
+if (myHours >= 5 && myHours <12) {
 	myGreeting = "Good Morning" ;
 	myColor = "yellow";
-}else{
-	alert('Not morning');
+	mypic += "morning.jpg";
+
+} else if (myHours >= 12 && myHours <18) {
+	myGreeting = "Good Afternoon";
+	myColor = "orange";
+	mypic += "afternoon.jpg";
+}else if (myHours>= 18 && myHours <23) {
+		myGreeting ="Good Evening";
+		myColor="green";
+		mypic +="evening.jpg";
+}else{ (myHours >= 23 && myHours <5)
+myGreeting = "Good Night";
+myColor="red";
+mypic += "night.jpg";
 }
-mydiv = "Time of Day: Morning<p>Morning (5 am to 12 noon)</p><p>Good Morning! Time to get up lazy bum</p><img src=\"images\/morning.jpg\" alt=\"Picture of Morning\" class=\"flexible\""
-} if (time < 10) {
-  greeting = "Good Evening";
-} else if (time < 20) {
-  greeting = "Good day";
-} else {
-  greeting = "Good Night";
+{alert('NOT morning')
 }
 
 document.getElementById("mydiv").innerHTML = myGreeting;
 document.body.style.backgroundColor = myColor;
-
+document.getElementById("mypic").src = mypic;
 </script>
 </body>
 </html>
